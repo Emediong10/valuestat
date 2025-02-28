@@ -27,11 +27,7 @@
                                 <img alt='Image'
                                     src=https://img.icons8.com/quill/100/chat-message.png
                                     class='avatar avatar-60 photo' height='70' width='70'/></span>
-                                    {{-- <span class="comment-avatar clearfix">
-                                        <img alt='Image'
-                                         width="100" height="100" src="https://img.icons8.com/quill/100/chat-message.png"
-                                        <i class="fas fa-envelope" style="font-size: 24px; margin-left: 10px; color: #555;"></i>
-                                    </span> --}}
+
 
 
                         </div>
@@ -66,9 +62,44 @@
             </div>
         @endforelse
 
+        <div>
+            @if ($comments->hasPages())
+                <nav role="navigation" aria-label="Pagination Navigation" class="flex justify-between">
+                    <span>
+                        {{-- Previous Page Link --}}
+                        @if ($comments->onFirstPage())
+                            <span
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 rounded-md cursor-default">
+                                {!! __('pagination.previous') !!}
+                            </span>
+                        @else
+                            <button wire:click="previousPage" wire:loading.attr="disabled" rel="prev"
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
+                                {!! __('pagination.previous') !!}
+                            </button>
+                        @endif
+                    </span>
 
-    </ol><!-- .commentlist end -->
-    {{-- {{ $this->comments->links() }} --}}
+                    <span>
+                        {{-- Next Page Link --}}
+                        @if ($comments->hasMorePages())
+                            <button wire:click="nextPage" wire:loading.attr="disabled" rel="next"
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
+                                {!! __('pagination.next') !!}
+                            </button>
+                        @else
+                            <span
+                                class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 rounded-md cursor-default">
+                                {!! __('pagination.next') !!}
+                            </span>
+                        @endif
+                    </span>
+                </nav>
+            @endif
+        </div>
+
+    </ol>
+
 
     <div class="clear"></div>
 
@@ -78,7 +109,7 @@
 
         <h3>Leave a <span>Comment</span></h3>
 
-        <form class="row" wire:submit.prevent="submitComment" id="commentform">
+        <form class="row" id="commentform">
             @csrf
             <div class="col-md-12 form-group">
                 <label for="author">Name</label>
@@ -88,16 +119,6 @@
                     <div class="text-danger small">{{ $message }}</div>
                 @enderror
             </div>
-
-            {{-- <div class="col-md-4 form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="" size="22" tabindex="2" class="sm-form-control" />
-            </div>
-
-            <div class="col-md-4 form-group">
-                <label for="url">Website</label>
-                <input type="text" name="url" id="url" value="" size="22" tabindex="3" class="sm-form-control" />
-            </div> --}}
 
             <div class="w-100"></div>
 
@@ -111,7 +132,7 @@
 
             <div class="col-12 form-group">
                 <button wire:click="submitComment" tabindex="5" class="button button-3d m-0">Submit Comment</button>
-               
+
             </div>
         </form>
 
