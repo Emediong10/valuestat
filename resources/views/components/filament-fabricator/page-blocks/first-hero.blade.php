@@ -3,7 +3,7 @@
 
 @props([
     'title',
-    'background_image',
+   
 'display_text_size',
 'sub_title',
 'apple_store_link',
@@ -15,7 +15,7 @@
 
 ])
 
-<section id="slider" class="slider-element dark min-vh-100 include-header" style="background-image: url('storage/{{ $background_image }}');">
+<section id="slider" class="slider-element dark min-vh-100 include-header" style="padding: 100px 0; background-color:rgb(61,128,228);"  >
     <div class="slider-inner flex-column">
 
         <div class="vertical-middle">
@@ -28,7 +28,7 @@
                         <div>
                             <a href="{{ isset($apple_store_link) ? (str_starts_with($apple_store_link, 'http://') || str_starts_with($apple_store_link, 'https://') ? $apple_store_link : 'https://' . $apple_store_link) : '#' }}"            class="px-4 py-3 mt-2 bg-white shadow-sm btn text-dark rounded-3 nott ls0"><i class="icon-apple1 me-2"></i>{{$apple_store}}</a>
 
-                            
+
                             <a href="{{ isset($play_store_link) ? (str_starts_with($play_store_link, 'http://') || str_starts_with($play_store_link, 'https://') ? $play_store_link : 'https://' . $play_store_link) : '#' }}" class="px-4 py-3 mt-2 bg-white shadow-sm ms-0 ms-lg-2 btn text-dark rounded-3 nott ls0"><i class="icon-google-play me-2"></i> {{ $play_store }} </a>
                         </div>
                         {{-- <p class="mt-2 text-white-50 text-uppercase ls1 fw-medium"><small>Sign up &amp; Get 30 Days Free trail</small></p> --}}

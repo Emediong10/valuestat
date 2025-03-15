@@ -34,16 +34,14 @@ public function submitComment()
         'blog_id' => $this->blog->id,
     ]);
 
-   
+    // Flash a success message
+    session()->flash('message', 'Comment added successfully.');
+
+    // Clear input fields
+    $this->reset(['name', 'comment']);
 }
 
 
-// #[Computed()]
-
-//     public function comments()
-//     {
-//         return $this->blog?->comments()->latest()->paginate(5);
-//     }
     public function render()
     {
         return view('livewire.blog-comment',

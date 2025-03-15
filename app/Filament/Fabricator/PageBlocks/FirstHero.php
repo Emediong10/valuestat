@@ -19,10 +19,6 @@ class FirstHero extends PageBlock
             ->schema([
                 Section::make('Hero Block Section')
                 ->schema([
-                    Card::make()
-                        ->schema([
-                            FileUpload::make('background_image'),
-                        ])->columnSpanFull(),
 
                     Card::make()
                         ->schema([

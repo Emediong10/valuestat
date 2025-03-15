@@ -1,9 +1,5 @@
 <div>
-    @if (session()->has('message'))
-        <div class="bg-blue-100 text-blue-800 p-2 rounded mb-4">
-            {{ session('message') }}
-        </div>
-    @endif
+
 
 
 <div id="comments" class="clearfix">
@@ -106,10 +102,17 @@
     <!-- Comment Form
     ============================================= -->
     <div id="respond">
+        @if (session()->has('message'))
+        <div style="background-color: #ebf8ff; color: #2b6cb0; padding: 8px; border-radius: 5px; margin-bottom: 16px;">
+            {{ session('message') }}
+        </div>
+    @endif
+
+
 
         <h3>Leave a <span>Comment</span></h3>
 
-        <form class="row" id="commentform">
+        <form class="row">
             @csrf
             <div class="col-md-12 form-group">
                 <label for="author">Name</label>
@@ -131,8 +134,7 @@
             </div>
 
             <div class="col-12 form-group">
-                <button wire:click="submitComment" tabindex="5" class="button button-3d m-0">Submit Comment</button>
-
+                <button wire:click.prevent="submitComment" type="button" class="button button-3d m-0">Submit Comment</button>
             </div>
         </form>
 
