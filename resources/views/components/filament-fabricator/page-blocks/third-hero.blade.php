@@ -13,7 +13,10 @@
 
           <div class="row align-items-stretch align-content-stretch g-0 topmargin">
 
-            <div class="{{ $image_position }}" style="background: url('{{ asset('storage/' . $background_image)}}'); center center / cover; min-height: 300px"></div>
+            <div class="{{ $image_position }}"
+            style="background: url('{{ asset('storage/' . $background_image) }}') center center / cover no-repeat;
+                   min-height: 300px;">
+       </div>
 
             <div class="{{ $text_position }}">
                 <div class="section-features">

@@ -33,8 +33,8 @@ class FirstHero extends PageBlock
 
                             Grid::make(2)
                                 ->schema([
-                                    TextInput::make('apple_store')->label('Apple Store Title'),
-                                    TextInput::make('apple_store_link')->label('Apple Store Link'),
+                                    // TextInput::make('apple_store')->label('Apple Store Title'),
+                                    // TextInput::make('apple_store_link')->label('Apple Store Link'),
                                     TextInput::make('play_store')->label('Play Store Title'),
                                     TextInput::make('play_store_link')->label('Play Store Link'),
                                 ]),
