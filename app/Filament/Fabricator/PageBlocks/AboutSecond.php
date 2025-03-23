@@ -9,6 +9,7 @@ use Filament\Forms\Components\TextInput;
 // use Filament\Infolists\Components\Section;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\MarkdownEditor;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class AboutSecond extends PageBlock
@@ -27,7 +28,9 @@ class AboutSecond extends PageBlock
                     ->schema([
                 FileUpload::make('image'),
                 TextInput::make('title'),
-                Textarea::make('description'),
+                MarkdownEditor::make('description'),
+
+                // Textarea::make('description'),
                     ]),
                     ])
 

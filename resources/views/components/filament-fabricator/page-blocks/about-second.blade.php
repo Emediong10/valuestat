@@ -31,7 +31,11 @@
                 </div>
                 <div class="p-5 col-md-6 p-lg-6">
                     <h3 class="h3 bottommargin fw-medium px-lg-5">{{ $index + 1 }}. {{ $feature['title'] }}</h3>
-                    <p class="m-0 px-lg-5">{{ $feature['description'] }}</p>
+
+                <div class="m-0 px-lg-5">
+                    {!! Str::markdown($feature['description']) !!}
+                </div>
+
                 </div>
             </div>
             <div class="clear"></div>
