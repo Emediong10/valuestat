@@ -34,8 +34,16 @@ class FifthHero extends PageBlock
                                         ->label('First Card Title'),
                                     TextInput::make('first_card_sub_title')
                                         ->label('First Card Subtitle'),
-                                    TextInput::make('first_card_link')
-                                        ->label('First Card Link'),
+
+                                        Grid::make(2)
+                                            ->schema([
+                                                TextInput::make('first_card_button_title')
+                                                ->label('button title'),
+                                            TextInput::make('first_card_link')
+                                                ->url(),
+
+                                            ]),
+
                                     Repeater::make('first_card_collection')
                                         ->schema([
                                             TextInput::make('first_title')
@@ -52,6 +60,16 @@ class FifthHero extends PageBlock
                                         ->label('Second Card Title'),
                                     TextInput::make('second_card_sub_title')
                                         ->label('Second Card Subtitle'),
+
+                                        Grid::make(2)
+                                            ->schema([
+                                                TextInput::make('second_card_button_title')
+                                                ->label('button name'),
+                                                TextInput::make('second_card_link')
+                                                ->url(),
+
+                                            ]),
+
                                     Repeater::make('second_card_collection')
                                         ->schema([
                                             TextInput::make('second_title')
@@ -88,6 +106,12 @@ class FifthHero extends PageBlock
         return $data;
     }
 }
+
+
+
+// 'second_card_button_title',
+// 'first_card_button_title',
+// 'second_card_link',
 
 
 // 'title',

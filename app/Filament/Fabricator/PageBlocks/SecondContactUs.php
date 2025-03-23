@@ -89,6 +89,10 @@ class SecondContactUs extends PageBlock
     }
 }
 
+// 'second_card_button_title',
+// 'first_card_button_title',
+// 'second_card_link',
+
 
 // 'contact_title',
 // 'contact_description',

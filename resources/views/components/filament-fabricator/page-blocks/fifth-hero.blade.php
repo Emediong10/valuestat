@@ -17,6 +17,11 @@
 'faq_collection',
 'title',
 'content',
+'first_card_button_title',
+
+'second_card_button_title',
+'first_card_button_title',
+'second_card_link',
 
 ])
 
@@ -49,14 +54,13 @@
                                         @endforeach
 
                                     </ul>
-                                    <a href="{{ $first_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">Download Free</a>
+                                    <a href="{{ $first_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">{{ $first_card_button_title }}</a>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 pricing-table mt-4 mt-lg-0">
                                 <div class="card shadow" style="background-image: url('demos/landing/images/section/pricing-bg.svg');">
-                                    <h5 class="text-uppercase ls1 text-white-50 mb-2">{{ $second_card_title }}</h5>
-                                    {{-- <h2 class="ls0 fw-bold mb-5 text-white">{{ $second_card_title }}</h2> --}}
+                                    <h2 class="ls0 fw-bold mb-3">{{ $second_card_title }}</h2>
                                     <p class="mt-2 text-black-50">{{ $second_card_sub_title }}</p>
                                     <ul class="iconlist">
 
@@ -65,7 +69,7 @@
                                         @endforeach
 
                                     </ul>
-                                    {{-- <a href="#" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">Purchase Pro</a> --}}
+                                    <a href="{{ $second_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">{{ $second_card_button_title }}</a>
                                 </div>
                             </div>
                         </div>

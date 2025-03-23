@@ -2,6 +2,7 @@
 
 namespace App\Filament\Fabricator\PageBlocks;
 
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Builder\Block;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
@@ -11,7 +12,8 @@ class AboutFirst extends PageBlock
     {
         return Block::make('about-first')
             ->schema([
-                //
+              TextInput::make('title'),
+              TextInput::make('description'),
             ]);
     }
 

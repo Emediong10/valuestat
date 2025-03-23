@@ -17,22 +17,25 @@ class AboutSecond extends PageBlock
     {
         return Block::make('about-second')
             ->schema([
-            //     Section::make('Heading')
-            //         ->description('')
-            //         ->schema([
-            //  TextInput::make('main_heading'),
-            //     TextInput::make('sub_heading'),
+                Section::make('Heading')
+                    ->description('')
+                    ->schema([
+             TextInput::make('main_heading'),
+                TextInput::make('sub_heading'),
 
-            //     Repeater::make('features')
-            //         ->schema([
-            //     FileUpload::make('image'),
-            //     TextInput::make('title'),
-            //     Textarea::make('description'),
-            //         ]),
-            //         ])
+                Repeater::make('features')
+                    ->schema([
+                FileUpload::make('image'),
+                TextInput::make('title'),
+                Textarea::make('description'),
+                    ]),
+                    ])
 
             ]);
     }
+    // 'second_card_button_title',
+// 'first_card_button_title',
+// 'second_card_link',
 
     public static function mutateData(array $data): array
     {

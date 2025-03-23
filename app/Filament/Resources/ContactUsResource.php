@@ -19,7 +19,10 @@ class ContactUsResource extends Resource
 {
     protected static ?string $model = ContactUs::class;
 
-    protected static ?string $navigationLabel = 'Contact us';
+    public static function getPluralLabel(): ?string
+    {
+        return 'Contact Us';
+    }
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

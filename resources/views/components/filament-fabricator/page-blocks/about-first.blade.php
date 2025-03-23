@@ -1,5 +1,6 @@
 @aware(['page'])
-<section id="slider" class="py-5 slider-element dark min-vh-25 min-vh-md-50 include-header" style="background-image: url('assets/demos/landing/images/hero/1.svg');">
+@props(['title', 'description'])
+<section id="slider" class="py-5 slider-element dark min-vh-25 min-vh-md-50 include-header"  style="padding: 100px 0; background-color:rgb(61,128,228);">
     <div class="slider-inner">
 
         <div class="text-center vertical-middle">
@@ -7,8 +8,8 @@
                 <div class="row align-items-center justify-content-center">
 
                     <div class="col-lg-6 col-md-6">
-                        <h2 class="mb-2 text-white display-3 fw-bold">About Us</h2>
-                        <p class="mb-0 lead fw-normal">Best Wallet App for your upcoming Projects.</p>
+                        <h2 class="mb-2 text-white display-3 fw-bold">{{ $title }}</h2>
+                        <p class="mb-0 lead fw-normal">{{ $description }}</p>
                     </div>
 
                 </div>
