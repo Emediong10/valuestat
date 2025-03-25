@@ -6,8 +6,8 @@
 
 'display_text_size',
 'sub_title',
-// 'apple_store_link',
-// 'apple_store',
+'apple_store_link',
+'apple_store',
 'play_store_link',
 'play_store',
 'image1',
@@ -26,7 +26,8 @@
                         <h2 class="text-white display-{{ $display_text_size }} fw-bold">{{ $title }} </h2>
                         <p class="mb-4 lead fw-normal">{{ $sub_title }} </p>
                         <div>
-                            {{-- <a href="{{ isset($apple_store_link) ? (str_starts_with($apple_store_link, 'http://') || str_starts_with($apple_store_link, 'https://') ? $apple_store_link : 'https://' . $apple_store_link) : '#' }}"            class="px-4 py-3 mt-2 bg-white shadow-sm btn text-dark rounded-3 nott ls0"><i class="icon-apple1 me-2"></i>{{$apple_store}}</a> --}}
+                            <a href="{{ isset($apple_store_link) ? asset('storage/'.$apple_store_link) : '#' }}"            class="px-4 py-3 mt-2 bg-white shadow-sm btn text-dark rounded-3 nott ls0">
+<i class="icon-buffer me-2" target="__blank"></i>{{$apple_store}}</a>
 
 
                             <a href="{{ isset($play_store_link) ? (str_starts_with($play_store_link, 'http://') || str_starts_with($play_store_link, 'https://') ? $play_store_link : 'https://' . $play_store_link) : '#' }}" class="px-4 py-3 mt-2 bg-white shadow-sm ms-0 ms-lg-2 btn text-dark rounded-3 nott ls0"><i class="icon-google-play me-2"></i> {{ $play_store }} </a>

@@ -68,8 +68,7 @@ class SixthHero extends PageBlock
             FileUpload::make('video')
             ->label('Feature Video')
             ->directory('videos')
-            ->maxSize(102400)
-            ->required(),
+            ->maxSize(102400),
 
     ])
     ->collapsible()
