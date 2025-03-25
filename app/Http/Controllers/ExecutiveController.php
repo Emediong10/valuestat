@@ -2,34 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Exception;
-use App\Models\Blog;
-use App\Models\Page;
+use App\Models\Executive;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Blade;
-use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
 
-class BlogController extends Controller
+class ExecutiveController extends Controller
 {
-    public function render_blog(Request $request, Blog $blog)
+    public function render_blog(Request $request, Executive $executive)
     {
-        //dd($request->route());
-        $page=Page::where('slug','blog/?blog')->first();
 
-        $blog=Blog::where('id',$request->route()->getAction()['blog'])->first();
+        $page=Page::where('slug','executive/?executive ')->first();
 
-        //$page=Info::where('id',$request->route()->getAction()['page'])->first();
+        $executive = Bxecutive::where('id',$request->route()->getAction()['executive'])->first();
+
+
         if(!$page->published)
         {
             abort(503);
         }
-        //dd($page);
 
-        $page->seo_tags=$blog->seo_tags;
-        $page->description=$blog->meta_description;
-        $page->title=$blog->title;
+        $page->seo_tags=$executive->seo_tags;
+        $page->description=$executive->meta_description;
+        $page->title=$executive->title;
 
-        //dd($page);
         /** @var ?class-string<Layout> $layout */
         $layout = FilamentFabricator::getLayoutFromName($page?->layout);
 
