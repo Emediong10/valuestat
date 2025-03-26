@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use App\Models\Executive;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Blade;
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
 
 class ExecutiveController extends Controller
 {
-    public function render_blog(Request $request, Executive $executive)
+    public function render_executive(Request $request, Executive $executive)
     {
 
-        $page=Page::where('slug','executive/?executive ')->first();
+        $page=Page::where('slug','about/?executive')->first();
 
-        $executive = Bxecutive::where('id',$request->route()->getAction()['executive'])->first();
+        $executive = Executive::where('id',$request->route()->getAction()['executive'])->first();
 
 
         if(!$page->published)

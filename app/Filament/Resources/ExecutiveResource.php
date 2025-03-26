@@ -93,12 +93,12 @@ class ExecutiveResource extends Resource
                         ]),
 
 
-
-
-
                         Section::make('About the Executive')
                         ->schema([
-                            FileUpload::make('image')->image()->directory('executives')
+                            FileUpload::make('image')
+                            ->image()
+                            ->multiple()
+                            ->directory('executives')
                             ->columnSpanFull(),
                             RichEditor::make('biography')
                                 ->required()

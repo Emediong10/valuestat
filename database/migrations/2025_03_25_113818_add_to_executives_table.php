@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('comments', function (Blueprint $table) {
-            $table->dropColumn('session_id');
+        Schema::table('executives', function (Blueprint $table) {
+            $table->string('slug')->unique()->after('name');
+            $table->boolean('active')->after('image');
         });
     }
 
@@ -21,8 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('comments', function (Blueprint $table) {
-            $table->string('session_id');
+        Schema::table('executives', function (Blueprint $table) {
+            //
         });
     }
 };

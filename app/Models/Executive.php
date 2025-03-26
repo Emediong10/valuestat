@@ -12,7 +12,9 @@ class Executive extends Model
     public $guarded = [];
 
     protected $casts = [
-        'social_media' => 'array'
+        'social_media' => 'array',
+        'image' => 'array',
+
     ];
 
 }

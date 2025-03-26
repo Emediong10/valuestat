@@ -29,7 +29,7 @@ foreach(Blog::where('published',1)->get() as $blog)
 
 foreach(Executive::where('active',1)->get() as $executive)
 {
-    Route::get('blog'."/".$executive->slug, [
+    Route::get('about'."/".$executive->slug, [
         'uses' => 'App\Http\Controllers\ExecutiveController@render_executive',
         'executive'=>$executive->id
     ])->name('executive-'.$executive->slug);
