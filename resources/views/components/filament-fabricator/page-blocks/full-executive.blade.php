@@ -1,5 +1,5 @@
 @aware(['page'])
-
+@props(['executive'])
 <section id="content" class="block-portfolio-single">
     <div class="content-wrap py-5">
         <div class="container">

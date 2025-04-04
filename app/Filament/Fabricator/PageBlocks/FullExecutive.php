@@ -21,7 +21,7 @@ class FullExecutive extends PageBlock
         $path=explode('/',request()->path());
         $count=count($path)?count($path)-1:1;
         $executive= Executive::where(['slug'=>$path[$count]])->first();
-        //dd($executive);
+        //dd($path[$count]);
         $data['executive']=$executive;
         return $data;
     }
