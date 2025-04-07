@@ -6,7 +6,7 @@
 {{--  <strong>Copyright &copy; {{ date('y') }} </strong> --}}
             <div class="row col-mb-30">
                 <div class="col-md-6 text-center text-md-start">
-                    Copyright &copy; {{ date('y') }}  All Rights Reserved by Canvas Inc.<br>
+                    Copyright &copy; {{ date('Y') }}  All Rights Reserved by Canvas Inc.<br>
                     <div class="copyright-links"><a href="#" class="text-white-50">Terms of Use</a> / <a href="#" class="text-white-50">Privacy Policy</a></div>
                 </div>
 
