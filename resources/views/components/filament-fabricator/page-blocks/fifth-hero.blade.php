@@ -54,22 +54,7 @@
                                         @endforeach
 
                                     </ul>
-                                    <a href="{{ $first_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">{{ $first_card_button_title }}</a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 pricing-table mt-4 mt-lg-0">
-                                <div class="card shadow" style="background-image: url('demos/landing/images/section/pricing-bg.svg');">
-                                    <h2 class="ls0 fw-bold mb-3">{{ $second_card_title }}</h2>
-                                    <p class="mt-2 text-black-50">{{ $second_card_sub_title }}</p>
-                                    <ul class="iconlist">
-
-                                        @foreach ($second_card_collection as $second_card_item)
-                                        <li><i class="icon-check-circle color"></i>{{ $second_card_item['second_title'] }}</li>
-                                        @endforeach
-
-                                    </ul>
-                                    <a href="{{ $second_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">{{ $second_card_button_title }}</a>
+                                    <a href="{{ $first_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">{{ \Stevebauman\Location\Facades\Location::get()->countryCode == 'NG' ? 'N40,000' : '$40' }}</a>
                                 </div>
                             </div>
                         </div>
