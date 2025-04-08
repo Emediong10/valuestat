@@ -15,9 +15,6 @@
                             <div class="entry-title">
                                 <h2><a href="#">{{ $video['title'] }}</a></h2>
                             </div>
-                            <div class="entry-meta">
-                               
-                            </div>
                             <div class="entry-content">
                                 <p>{{ $video['description'] }}</p>
                             </div>
@@ -58,19 +55,18 @@
         .entry-image iframe {
             width: 100%;
             height: 300px;
-            border-radius: 6px;
+            border-radius: 2px;
         }
 
         .entry-title h2 {
             font-size: 18px;
-            margin: 10px 0;
+            margin: 2px 0;
             text-align: center;
         }
 
         .entry-content {
-            height: 200px;
             overflow-y: auto;
-            margin-top: 10px;
+            margin-top: 2px;
         }
 
         .entry-content p {
