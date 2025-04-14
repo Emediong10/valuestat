@@ -1,6 +1,6 @@
 @aware(['page'])
 {{-- <section id="content">
-    <div class="content-wrap pb-0"> --}}
+    <div class="pb-0 content-wrap"> --}}
 @props([
 'title',
 'sub_title',
@@ -28,7 +28,7 @@
 
 
 
-        <div class="section m-0 parallax" style="padding: 100px 0; background-color:rgb(61,128,228);" data-0-top="background-color:rgb(61,128,228);" data-center-bottom="background-color:rgb(0,0,0);">
+        <div class="m-0 section parallax" style="padding: 100px 0; background-color:rgb(61,128,228);" data-0-top="background-color:rgb(61,128,228);" data-center-bottom="background-color:rgb(0,0,0);">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-xl-4 col-lg-5 col-md-6 dark dotted-bg">
@@ -42,9 +42,9 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="row">
                             <div class="col-lg-6 pricing-table">
-                                <div class="card shadow" style="background-image: url('demos/landing/images/section/pricing-bg-light.svg'); background-position: 0 100%; background-size: 100% 290px;">
-                                    {{-- <h5 class="text-uppercase ls1 mb-2">{{ $first_card_title }}</h5> --}}
-                                    <h2 class="ls0 fw-bold mb-3">{{ $first_card_title }}</h2>
+                                <div class="shadow card" style="background-image: url('demos/landing/images/section/pricing-bg-light.svg'); background-position: 0 100%; background-size: 100% 290px;">
+                                    {{-- <h5 class="mb-2 text-uppercase ls1">{{ $first_card_title }}</h5> --}}
+                                    <h2 class="mb-3 ls0 fw-bold">{{ $first_card_title }}</h2>
                                     <p class="mb-5 text-black-50"> {{ $first_card_sub_title }}</p>
                                     <ul class="iconlist">
 
@@ -54,7 +54,7 @@
                                         @endforeach
 
                                     </ul>
-                                    <a href="{{ $first_card_link }}" class="btn w-100 text-white bg-color rounded-3 p-3 fw-semibold text-uppercase">{{ \Stevebauman\Location\Facades\Location::get()->countryCode == 'NG' ? 'N40,000' : '$40' }}</a>
+                                    <a href="{{ $first_card_link }}" class="p-3 text-white btn w-100 bg-color rounded-3 fw-semibold text-uppercase">{{ \Stevebauman\Location\Facades\Location::get()->countryCode == 'NG' ? 'N40,000' : '$40' }}</a>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="row justify-content-center dark topmargin">
                     <div class="col-md-7">
-                        <h2 class="text-center text-white mb-5 mt-4 fw-semibold">{{ $faq_main_title }}</h2>
+                        <h2 class="mt-4 mb-5 text-center text-white fw-semibold">{{ $faq_main_title }}</h2>
                         <div class="toggle-wrap">
 
                                 @foreach ($faq_collection as $faq_item)
@@ -85,7 +85,7 @@
 
 
                         </div>
-                        {{-- <h5 class="mt-4 text-center fw-normal text-white-50 mb-0">Didn't find what you were after? <a href="#" class="text-white"><u>Visit the FAQ Page</u></a></h5> --}}
+                        {{-- <h5 class="mt-4 mb-0 text-center fw-normal text-white-50">Didn't find what you were after? <a href="#" class="text-white"><u>Visit the FAQ Page</u></a></h5> --}}
                     </div>
                 </div>
             </div>
