@@ -9,7 +9,7 @@
 ])
 <section id="content">
     <div class="content-wrap pb-0">
-        <div style="padding: 100px 0; background-image: linear-gradient(to bottom, #3D80E4 0%, #0a4bab 80%, #FFF 80%);">
+        <div style="padding: 20px 0; background-image: linear-gradient(to bottom, #3D80E4 0%, #0a4bab 80%, #FFF 80%);">
             <div class="section m-0 bg-color" >
             <div class="container dark dotted-bg bottommargin-lg">
                 <div class="fslider testimonial testimonial-full center bg-transparent border-0 shadow-none p-0" data-animation="fade" data-pagi="false">

@@ -25,15 +25,16 @@
                     <div class="col-lg-6 col-md-6">
                         <h2 class="text-white display-{{ $display_text_size }} fw-bold">{{ $title }} </h2>
                         <p class="mb-4 lead fw-normal">{{ $sub_title }} </p>
-                        <div>
+                        <div style="margin-bottom: 35px;">
                             <a href="{{ isset($apple_store_link) ? asset('storage/'.$apple_store_link) : '#' }}"            class="px-4 py-3 mt-2 bg-white shadow-sm btn text-dark rounded-3 nott ls0">
-<i class="icon-buffer me-2" target="__blank"></i>{{$apple_store}}</a>
+                            <i class="icon-buffer me-2" target="__blank"></i>{{$apple_store}}</a>
 
 
                             <a href="{{ isset($play_store_link) ? (str_starts_with($play_store_link, 'http://') || str_starts_with($play_store_link, 'https://') ? $play_store_link : 'https://' . $play_store_link) : '#' }}" class="px-4 py-3 mt-2 bg-white shadow-sm ms-0 ms-lg-2 btn text-dark rounded-3 nott ls0"><i class="icon-google-play me-2"></i> {{ $play_store }} </a>
                         </div>
                         {{-- <p class="mt-2 text-white-50 text-uppercase ls1 fw-medium"><small>Sign up &amp; Get 30 Days Free trail</small></p> --}}
                     </div>
+
 
                     <div class="col-lg-1 d-md-none d-lg-block"></div>
 

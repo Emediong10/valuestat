@@ -81,7 +81,7 @@
 
 .slide-imgs .card-img {
 	position: absolute;
-	bottom: 10px;
+	/* bottom: 10px; */
 	left: -90px;
 	width: 360px;
 	transition: opacity 0.65s cubic-bezier(0.2, 0.7, .3, 1);
