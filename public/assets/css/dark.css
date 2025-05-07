@@ -102,7 +102,7 @@ body #side-panel.dark {
 }
 
 .dark #header-wrap {
-	background-color: #333;
+	background-color: rgb(61, 128, 228);
 }
 
 @media (min-width: 992px) {
