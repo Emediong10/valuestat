@@ -32,7 +32,7 @@ class BlogListing extends PageBlock
 
     public static function mutateData(array $data): array
 {
-    $perPage = $data['per_page'] ?? 10;
+    $perPage = $data['per_page'] ?? 6;
      $data['blogs']=Blog::where('published', 1)
      ->orderBy('created_at', 'desc')
      ->with('author')

@@ -6451,8 +6451,8 @@ body:not(.has-plugin-html5video) .video-wrap video {
 #page-title {
 	position: relative;
 	padding: 4rem 0;
-	background-color: #F5F5F5;
-	border-bottom: 1px solid #EEE;
+	/* background-color: #F5F5F5; */
+	/* border-bottom: 1px solid #EEE; */
 }
 
 #page-title .container {
@@ -6503,7 +6503,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 -----------------------------------------------------------------*/
 
 #page-title.page-title-dark {
-	background-color: #333;
+	background-color: rgb(61, 128, 228);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1) !important;
 	border-bottom: none;
 }
