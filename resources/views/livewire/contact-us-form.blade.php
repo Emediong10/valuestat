@@ -2,63 +2,81 @@
     <div class="card-body p-5">
         <div class="form-widget" data-loader="button" data-alert-type="inline">
 
-
             <div class="form-result"></div>
 
             @if ($successMsg)
-            <div class="alert alert-success">
-                {{ $successMsg }}
-            </div>
-        @elseif (session('error_message'))
-            <div class="alert alert-danger">
-                {{ session('error_message') }}
-            </div>
-        @endif
-
-            <form class="row mb-0" wire:submit="save" action="" method="post" enctype="multipart/form-data">
-                <div class="form-process"></div>
-                 <div class="row">
-                        <div class="col-6 form-group mb-4">
-                            <label>First Name:</label>
-                            <input type="text" wire:model = "firstname" name="landing-enquiry-name" class="form-control form-control-lg required"  placeholder="Your first name">
-                            @error('firstname') <span style="color: red;">{{ $message }}</span> @enderror
-                        </div>
-                        <div class="col-6 form-group mb-4">
-                            <label>Last Name:</label>
-                            <input type="text" wire:model = "lastname" name="landing-enquiry-name" class="form-control form-control-lg required"  placeholder="Your Last name">
-                            @error('lastname') <span style="color: red;">{{ $message }}</span> @enderror
-                        </div>
-             </div>
-                <div class="col-12 form-group mb-4">
-                    <label>Email:</label>
-                    <input type="email" wire:model="email" class="form-control form-control-lg required" value="" placeholder="user@company.com">
-                    @error('email') <span style="color: red;">{{ $message }}</span> @enderror
+                <div class="alert alert-success">
+                    {{ $successMsg }}
                 </div>
-                <div class="col-12 form-group mb-4">
-                    <label>Phone:</label><br>
-                    <div class="input-group input-group-lg">
-                        <input type="text"  wire:model="phone" class="form-control form-control-lg required" value="" placeholder="08123456789">
-                        @error('phone') <span style="color: red;">{{ $message }}</span> @enderror
+            @elseif (session('error_message'))
+                <div class="alert alert-danger">
+                    {{ session('error_message') }}
+                </div>
+            @endif
+
+            <form class="row mb-0" wire:submit.prevent="save" method="post" enctype="multipart/form-data">
+                <div class="form-process"></div>
+
+                <!-- First Name -->
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" wire:model="firstname" placeholder="Your first name" class="form-control" id="firstName">
+                        @error('firstname') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                 </div>
-                <div class="mb-4 form-group">
-                    <label>Message Subject:</label>
-                    <input type="text" wire:model="subject" class="form-control" placeholder="Contact Subject">
-                    @error('subject') <span style="color: red;">{{ $message }}</span> @enderror
-                </div>
-                <div class="col-12 form-group mb-4">
-                    <label>Message:</label>
-                    <textarea wire:model="comment" class="form-control form-control-lg" cols="30" rows="5" placeholder="Please let us know how we can help you..."></textarea>
-                    @error('comment') <span style="color: red;">{{ $message }}</span> @enderror
-                </div>
-                {{-- <div class="col-12 d-none">
-                    <input type="text" id="landing-enquiry-botcheck" name="landing-enquiry-botcheck" value="" />
-                </div> --}}
-                <div class="col-12">
-                    <button type="submit" name="landing-enquiry-submit" class="btn w-100 text-white bg-color rounded-3 py-3 fw-semibold text-uppercase mt-2">Contact Us</button>
+
+                <!-- Last Name -->
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" wire:model="lastname" placeholder="Your last name" class="form-control" id="lastName">
+                        @error('lastname') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
                 </div>
 
-                {{-- <input type="hidden" name="prefix" value="landing-enquiry-"> --}}
+                <!-- Email -->
+                <div class="col-12 mb-3">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" wire:model="email" class="form-control" placeholder="user@company.com" id="email">
+                        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="col-12 mb-3">
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" wire:model="phone" class="form-control" placeholder="08123456789" id="phone">
+                        @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                </div>
+
+                <!-- Subject -->
+                <div class="col-12 mb-3">
+                    <div class="form-group">
+                        <label for="subject">Message Subject:</label>
+                        <input type="text" wire:model="subject" class="form-control" placeholder="Contact Subject" id="subject">
+                        @error('subject') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                </div>
+
+                <!-- Comment -->
+                <div class="col-12 mb-4">
+                    <div class="form-group">
+                        <label for="comment">Message:</label>
+                        <textarea wire:model="comment" class="form-control" rows="5" placeholder="Please let us know how we can help you..." id="comment"></textarea>
+                        @error('comment') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+                </div>
+
+               
+                <div class="col-12">
+                    <button type="submit" class="btn w-100 text-white bg-color rounded-3 py-3 fw-semibold text-uppercase mt-2">
+                        Contact Us
+                    </button>
+                </div>
             </form>
         </div>
     </div>
